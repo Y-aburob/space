@@ -9,9 +9,8 @@ import { useEffect, useState } from 'react';
 export default function Crew() {
 
     const [currentId, setCurrentId] = useState('0')
-    const [number, setNumber] = useState('0')
     
-    const [crewList, setCrewList] = useState([
+    const crewList = ([
         {
         name: 'Douglas Hurley',
         style: 'Commander',
