@@ -1,14 +1,23 @@
 .nav {
-    position: sticky;
+    position: sticky !important;
     top: 0;
 }
 
-.list {
-    z-index: 2;
-    background-color: rgba(245, 245, 245, .1);
+.backgroundTrans {
+    /* background-color: rgba(245, 245, 245, .1); */
+    background-image: url('../assets/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.list::before {
+@media (min-width: 640px) {
+    .backgroundTrans {
+        background-image: none;
+        background-color: rgba(245, 245, 245, .1);
+    }
+}
+
+/* .backgroundTrans::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -16,14 +25,16 @@
     top: 0;
     filter: blur(40px);
     z-index: -1;
-}
-
+    position: sticky;
+    top: 0;
+} */
 
 
 .sections {
     position: relative;
     transition: all .5s;
     padding-bottom: 10px;
+    color: #d9dcee;
 }
 
 .sections:hover {
