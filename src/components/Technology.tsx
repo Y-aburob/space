@@ -32,7 +32,7 @@ export default function Technology() {
     return (
 
     < >
-        <div className="mainTechnology h-[160vh] lg:h-[120vh] relative sm:overflow-visible">
+        <div className="mainTechnology min-h-[200vh] lg:min-h-[140vh] relative overflow-hidden sm:overflow-visible">
             <Nav />
             
             <h1 className="text-xl font-light tracking-wider text-center text-white mt-7 word-spacing sm:text-left sm:ml-7 lg:ml-32">SPACE LAUNCH 101</h1>
@@ -40,8 +40,8 @@ export default function Technology() {
             {/* <div className='relative w-full h-full'> */}
                 {vehicleList.map((vehicle) => (
                 <div className={`w-full transition-all absolute left-1/2 -translate-x-1/2 lg:w-full duration-500 mt-20 ${currentId === vehicle.id? 'opacity-100': 'opacity-0'}`}>
-                    <div className=' p-5 lg:p-0 lg:absolute lg:right-0 h-[450px] lg:w-[585px] lg:h-[590px] md:overflow-hidden lg:cursor-pointer'>
-                    <img className=' object-contain w-full h-[450px] lg:w-full lg:h-full transition-all duration-500 lg:hover:scale-125' src={vehicle.src} alt="" />
+                    <div className=' p-5 lg:p-0 lg:absolute lg:right-0 max-h-[450px] lg:w-[540px] lg:max-h-[590px] md:overflow-hidden lg:cursor-pointer'>
+                    <img className='object-contain lg:object-cover w-full h-[450px] lg:w-full lg:h-full transition-all duration-500 lg:hover:scale-125' src={vehicle.src} alt="" />
                     </div>
                     
                     <div className='text '>
@@ -51,10 +51,10 @@ export default function Technology() {
                                 <input onChange={(e) => setCurrentId(e.target.id)} className='hidden slider' type="radio" name="crew" id="1" /><label className={`label font-bold text-white flex justify-center items-center transition-all duration-500 p-5 md:p-8 border-2 w-6 h-6 rounded-full cursor-pointer hover:bg-white hover:text-black `} htmlFor='1'>2</label>
                                 <input onChange={(e) => setCurrentId(e.target.id)} className='hidden slider' type="radio" name="crew" id="2" /><label className={`label font-bold text-white flex justify-center items-center transition-all duration-500 p-5 md:p-8 border-2 w-6 h-6 rounded-full cursor-pointer hover:bg-white hover:text-black `} htmlFor='2'>3</label>
                             </div>
-                            <div className={`transition-all duration-700 flex flex-col items-center justify-center mt-12 text-center lg:text-left lg:items-start lg:mr-[56%] ${currentId === vehicle.id? 'opacity-100 translate-x-0': 'opacity-0 translate-x-20'}`}>
+                            <div className={`transition-all duration-700 flex flex-col items-center justify-center mt-12 text-center lg:text-left lg:items-start lg:mr-[56%]`}>
                                 <h2 className={`text-2xl text-white opacity-50 spaceTtitleCrew lg:text-4xl`}>THE TERMINOLOGY…</h2>
-                                <h1 className={`mt-5 text-3xl text-white spaceTtitleCrew lg:text-5xl`}>{vehicle.name}</h1>
-                                <p className='mt-10 max-w-[327px] sm:max-w-[512px] lg:max-w-[539px] text-[16px] lg:text-[20px]'>
+                                <h1 className={`transition-all duration-1000 mt-5 text-3xl text-white spaceTtitleCrew lg:text-5xl ${currentId === vehicle.id? 'opacity-100 translate-x-0': 'opacity-0 translate-x-20'}`}>{vehicle.name}</h1>
+                                <p className={`transition-all duration-1000 mt-10 max-w-[327px] sm:max-w-[512px] lg:max-w-[539px] text-[16px] lg:text-[20px] ${currentId === vehicle.id? 'opacity-100 translate-x-0': 'opacity-0 translate-x-20'}`}>
                                     {vehicle.description}
                                 </p>
                             </div>
