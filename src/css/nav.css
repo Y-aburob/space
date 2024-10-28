@@ -1,0 +1,48 @@
+.nav {
+    position: sticky;
+    top: 0;
+}
+
+.list {
+    z-index: 2;
+    background-color: rgba(245, 245, 245, .1);
+}
+
+.list::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    filter: blur(40px);
+    z-index: -1;
+}
+
+
+
+.sections {
+    position: relative;
+    transition: all .5s;
+    padding-bottom: 10px;
+}
+
+.sections:hover {
+    color: #FFF;
+}
+
+.sections::after {
+    position: absolute;
+    width: 100%;
+    left: -30px;
+    opacity: 0;
+    bottom: 0;
+    background-color: #FFF;
+    height: 2px;
+    transition: all .5s;
+    content: '';
+}
+
+.sections:hover::after {
+    left: 0;
+    opacity: 1;
+}
