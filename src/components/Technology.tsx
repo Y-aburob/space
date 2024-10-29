@@ -39,7 +39,7 @@ export default function Technology() {
             
             {/* <div className='relative w-full h-full'> */}
                 {vehicleList.map((vehicle) => (
-                <div className={`w-full transition-all absolute left-1/2 -translate-x-1/2 lg:w-full duration-500 mt-20 ${currentId === vehicle.id? 'opacity-100': 'opacity-0'}`}>
+                <div key={vehicle.id} className={`w-full transition-all absolute left-1/2 -translate-x-1/2 lg:w-full duration-500 mt-20 ${currentId === vehicle.id? 'opacity-100': 'opacity-0'}`}>
                     <div className=' p-5 lg:p-0 lg:absolute lg:right-0 max-h-[450px] lg:w-[540px] lg:max-h-[590px] md:overflow-hidden lg:cursor-pointer'>
                     <img className='object-contain lg:object-cover w-full h-[450px] lg:w-full lg:h-full transition-all duration-500 lg:hover:scale-125' src={vehicle.src} alt="" />
                     </div>

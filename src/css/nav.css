@@ -53,6 +53,27 @@
     content: '';
 }
 
+.pressed {
+    position: relative;
+    transition: all .5s;
+    padding-bottom: 10px;
+    color: #d9dcee;
+}
+
+.pressed::before {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    bottom: 0;
+    background-color: #FFF;
+    height: 2px;
+    transition: all .5s;
+    content: '';
+    color: #FFF;
+}
+
+
 .sections:hover::after {
     left: 0;
     opacity: 1;

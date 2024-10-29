@@ -4,11 +4,19 @@ import close from '../assets/shared/icon-close.svg';
 import logo from '../assets/shared/logo.svg';
 import '../css/Home.css'
 import '../css/nav.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Nav() {
 
     const [click, setClick] = useState(false)
+
+    const currentUrl = useLocation()
+    
+    const isActive = (path: String) => {
+        return currentUrl.pathname === path;
+    };
+    
+
     return (  
         < >
         <div className='z-50 flex justify-between sm:pt-5 nav'>
@@ -21,10 +29,10 @@ export default function Nav() {
         <div className={`fixed p-4 top-0 z-50 h-screen w-full text-white text-right backgroundTrans sm:h-fit sm:w-fit sm:static sm:flex sm:justify-center sm:items-center sm:self-center ${click? 'block': 'hidden'}`}>
             <button onClick={() => setClick(false)} className=''> <img src={close} alt="" className={`sm:hidden mt-3`}/></button>
             <ul className='flex flex-col items-center justify-center h-full gap-10 sm:flex-row sm:pl-20 sm:gap-14'>
-            <li><Link to='/' className='sections'>Home</Link></li>
-            <li><Link to='/destination' className='sections'>DESTINATION</Link></li>
-            <li><Link to='/crew' className='sections'>CREW</Link></li>
-            <li><Link to='/technology' className='sections'>TECHNOLOGY</Link></li>
+            <li><Link to='/' className={`sections ${isActive('/')? 'pressed': ''}`}>Home</Link></li>
+            <li><Link to='/destination' className={`${isActive('/destination')? 'pressed': 'sections'}`}>DESTINATION</Link></li>
+            <li><Link to='/crew' className={`sections ${isActive('/crew')? 'pressed': ''}`}>CREW</Link></li>
+            <li><Link to='/technology' className={`sections ${isActive('/technology')? 'pressed': ''}`}>TECHNOLOGY</Link></li>
             </ul>
         </div>
         {/* <div className='sm:absolute sm:top-[32px] sm:right-0 backgroundTrans blur-md sm:h-[50px] sm:w-[520px]'></div> for blur effect on nav*/}

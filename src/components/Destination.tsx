@@ -61,10 +61,10 @@ export default function Destination() {
                             
                             <div className="lg:text-left">
                                 <form className="flex justify-center tracking-wide gap-9 lg:justify-start">
-                                    <input onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="0"/><label className="cursor-pointer md:p-3 planets moon" htmlFor="0">MOON</label>
-                                    <input onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="1"/><label className="cursor-pointer md:p-3 planets mars" htmlFor="1">MARS</label>
-                                    <input onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="2"/><label className="cursor-pointer md:p-3 planets europa" htmlFor="2">EUROPA</label>
-                                    <input onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="3"/><label className="cursor-pointer md:p-3 planets titan" htmlFor="3">TITAN</label>
+                                    <input  onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="0"/><label  className="cursor-pointer md:p-3 planets moon" htmlFor="0">MOON</label>
+                                    <input  onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="1"/><label  className="cursor-pointer md:p-3 planets mars" htmlFor="1">MARS</label>
+                                    <input  onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="2"/><label  className="cursor-pointer md:p-3 planets europa" htmlFor="2">EUROPA</label>
+                                    <input  onChange={(e) => setCurrentId(e.target.id)} name='planets' type="radio" className="hidden text-lg" id="3"/><label  className="cursor-pointer md:p-3 planets titan" htmlFor="3">TITAN</label>
                                 </form>
                                 <div className="flex flex-col items-center justify-center gap-8 mt-16 lg:items-start">
                                     <h1 className={`transition-all duration-500 tracking-widest text-white letterSpacing text-7xl spaceTtitle ${currentId === planet.id? 'opacity-100 translate-x-0':'opacity-0 translate-x-1/2'}`}>{planet.name}</h1>
