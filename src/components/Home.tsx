@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
                 
                 <div className=' circle relative rounded-full w-[144px] h-[144px] flex justify-center items-center sm:w-[202px] sm:h-[202px] lg:w-[242px] lg:h-[242px]'>
-                    <h1 className='text-[#0B0D17] h-full w-full rounded-full text-center relative cursor-pointer'><span className='absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2'>EXPLORE</span></h1>
+                    <h1 className='smallH text-[#0B0D17] h-full w-full rounded-full text-center relative cursor-pointer'><span className='absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2'>EXPLORE</span></h1>
                 </div>
             </div>
         </div>
