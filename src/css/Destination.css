@@ -1,8 +1,16 @@
 .banner {
-    background-image: url('../assets/destination/background-destination-mobile.jpg');
+    background-image: url('../assets/destination/background-destination-tablet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+@media (min-width: 1024px) {
+    .banner {
+        background-image: url('../assets/destination/background-destination-desktop.jpg');
+    }
+}
+
 
 .word-spacing {
     word-spacing: 7px;
@@ -30,6 +38,22 @@
 }
 
 .planets::after {
+    position: absolute;
+    width: 100%;
+    left: -30px;
+    opacity: 0;
+    bottom: 0;
+    background-color: #FFF;
+    height: 2px;
+    transition: all .5s;
+    content: '';
+}
+
+.clickedd {
+    position: relative;
+    transition: all .5s;
+}
+.clickedd::after {
     position: absolute;
     width: 100%;
     left: -30px;
@@ -104,15 +128,3 @@
     }
 } */
 
-
-@media (min-width: 640px) {
-    .banner {
-        background-image: url('../assets/destination/background-destination-tablet.jpg');
-    }
-}
-
-@media (min-width: 1024px) {
-    .banner {
-        background-image: url('../assets/destination/background-destination-desktop.jpg');
-    }
-}
