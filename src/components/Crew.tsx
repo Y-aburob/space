@@ -6,7 +6,6 @@ import victor from '../assets/crew/image-victor-glover.png'
 import ansari from '../assets/crew/image-anousheh-ansari.png'
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { div } from 'framer-motion/client';
 
 export default function Crew() {
 
